@@ -13,7 +13,9 @@ This would allow illegal characters, and therefore licence plates, to pass the t
 
 
 ## Regex Definition:
-http://dvlaregistrations.direct.gov.uk/help/website-usage.html?question=style_reg
+https://dvlaregistrations.dvla.gov.uk/help/#style_reg
+
+https://assets.publishing.service.gov.uk/media/62554c78d3bf7f600782fd4f/inf104-vehicle-registration-numbers-and-number-plates.pdf
 
 DVLA define UK registration plates into four groups:
 * Current style: AA## AAA
@@ -39,7 +41,7 @@ The disallowed numbers use a technique called negative lookahead (contained in a
 ---
 
 ### Group two: Prefix Style
-* regex literal: `^[A-HJ-NPR-Y](?!0)[0-9]{1,3} ?[A-HJ-PR-Y]{3}$`
+* regex literal: `^[A-HJ-NPR-TV-Y](?!0)[0-9]{1,3} ?[A-HJ-PR-Y]{3}$`
 * Date range: August 1983 to August 2001
 
 Prefix style registration plates are one letter, one to three numbers, and three letters. The first letter is the year marker.
@@ -50,7 +52,7 @@ Also, the number section must not start with a 0.__
 ---
 
 ### Group three: Suffix Style
-* regex literal: `^[A-HJ-PR-Y]{3} ?(?!0)[0-9]{1,3}[A-HJ-NPR-Y]$`
+* regex literal: `^[A-HJ-PR-Y]{3} ?(?!0)[0-9]{1,3}[A-HJ-NPR-TV-Y]$`
 * Date range: February 1963 to July 1983
 
 Suffix style registration plates are three letters, one to three numbers, and one letter. The last letter is the year marker.
